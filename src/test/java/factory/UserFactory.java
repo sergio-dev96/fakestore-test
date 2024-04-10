@@ -32,7 +32,7 @@ public class UserFactory {
                 .build();
     }
 
-    private static User newUserWithInvalidEmail() {
+    public static User newUserWithInvalidEmail() {
         return new UserBuilder()
                 .password(faker.internet().password(8,20))
                 .lastName(faker.name().lastName())
@@ -42,7 +42,7 @@ public class UserFactory {
                 .build();
     }
 
-    private static User newUserWithShortPassword() {
+    public static User newUserWithShortPassword() {
         return new UserBuilder()
                 .password(faker.internet().password(1,2))
                 .lastName(faker.name().lastName())
