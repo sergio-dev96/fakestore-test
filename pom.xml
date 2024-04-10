@@ -26,6 +26,9 @@
         <log4j.version>2.22.1</log4j.version>
         <allure.version>2.25.0</allure.version>
         <aspectj.version>1.9.6</aspectj.version>
+
+        <include-test>smoke,regression</include-test>
+        <exclude-test>none</exclude-test>
     </properties>
 
     <dependencyManagement>
@@ -123,6 +126,9 @@
                             <value>io.qameta.allure.junit5.AllureJunit5</value>
                         </property>
                     </properties>
+
+                    <groups>${include-test}</groups>
+                    <excludedGroups>${exclude-test}</excludedGroups>
                 </configuration>
                 <dependencies>
                     <dependency>

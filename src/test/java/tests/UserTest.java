@@ -8,6 +8,8 @@ import io.qameta.allure.Story;
 import model.User;
 import model.UserInvalidResponse;
 import org.apache.http.HttpStatus;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -16,6 +18,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.core.StringContains.containsStringIgnoringCase;
 
+@Tags({@Tag("regression")})
 public class UserTest extends BaseTest {
 
     @Test

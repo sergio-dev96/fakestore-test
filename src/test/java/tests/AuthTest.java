@@ -12,15 +12,14 @@ import io.restassured.RestAssured;
 import model.UserLoginResponse;
 import org.apache.http.HttpStatus;
 import org.hamcrest.CoreMatchers;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsNull.notNullValue;
 import static org.hamcrest.text.IsEmptyString.emptyString;
 
+@Tags({@Tag("smoke"), @Tag("regression")})
 public class AuthTest extends BaseTest {
 
     @Test
